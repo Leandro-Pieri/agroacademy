@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <script src="js/script.js"></script> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link rel="shortcut icon" href="img/free_farm_icons_vector_template_icon_153809.ico">
+    <title>Agroacademy</title>
+    <link href="css/style.css" rel="stylesheet" />
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="center">
+            <div class="logo"><img src="img/logo1.png" alt="Logo da Agroacademy" /></div><!--logo-->
+            <div class="menu">
+                <a href="#" data-page="sobre">Sobre a Agroacademy</a>
+                <a href="#" data-page="fazemos">O que fazemos</a>
+                <a href="#" data-page="cursos">Cursos</a>
+                <a href="#" data-page="certificados">Certificados</a>
+                <a href="#" data-page="webnarios">Webnários</a>
+                <a href="#" data-page="repositorio">Repositório</a>
+                <a href="#" data-page="parceiros">Parceiros</a>
+                <a href="#" data-page="suporte">Ajuda e Suporte</a> 
+            </div><!--menu-->
+            <div class="menu-icon"><img src="img/menu-icon.png" alt="símbolo de menu" /></div>
+        </div><!--center-->
+    </header>
+    <section id="sobre" class="sobre" data-page-name="sobre">
+    <class="sobre" data-page-name="sobre">
+        <div class="center">
+            <h1>Agroacademy</h1>
+            <p>Maior plataforma de cursos profissionalizantes voltados para o agricultura sustentavél do Brasil.</p>
+        </div>
+    </section>
+    
+    <section id="cursos" class="cursos" data-page-name="cursos">
+        <div class="center">
+            <h2>Nossos Cursos em Destaque</h2>
+            
+            <section id="curso1" class="curso">
+                <img src="img/curso1.jpg" alt="Curso 1">
+                <h3>Curso de Agricultura Orgânica</h3>
+                <p>Aprenda a cultivar alimentos de forma orgânica, sem o uso de produtos químicos nocivos.</p>
+                <a href="pages/curso1.html">Conteúdo</a>
+            </section>
+            
+            <section id="curso2" class="curso">
+                <img src="img/curso2.jpg" alt="Curso 2">
+                <h3>Curso de Agricultura de Precisão</h3>
+                <p>Domine as tecnologias modernas para otimizar sua produção agrícola.</p>
+                <a href="pages/curso2.html">Conteúdo</a>
+            </section>
+
+            <section id="curso3" class="curso">
+                <img src="img/curso3.png" alt="Curso 3">
+                <h3>Curso de Arborização de Pastagens - Sistema Silvipastoril </h3>
+                <p>Sistema Silvipastoril faz a integração pecuária e florestal para sustentabilidade ambiental e benefícios à produção animal.</p>
+                <a href="pages/curso3.html">Conteúdo</a>
+            </section>
+            
+            
+        </div>
+    </section>
+
+    
+    <section class="inscricao" data-page-name="inscricao">
+        <div class="center">
+            <h2>Matricule-se Agora!</h2>
+            <p>Comece sua jornada na agricultura sustentável inscrevendo-se em nossos cursos. Torne-se um agricultor consciente do meio ambiente.</p>
+            
+        </div>
+    
+    <!-- Adicione o seguinte código ao seu HTML existente da Agroacademy, preferencialmente em uma seção separada -->
+     <class="enrollment" data-page-name="enrollment">
+        <div class="center">
+            <h2>Matricule-se</h2>
+            <form id="enrollment-form">
+                <input type="text" id="name" placeholder="Seu Nome" />
+                <input type="email" id="email" placeholder="Seu E-mail" />
+                <button id="enroll-button">Matricular-se</button>
+            </form>
+        </div>
+    </section>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var enrollButton = document.getElementById('enroll-button');
+            if (enrollButton) {
+                enrollButton.addEventListener('click', function (event) {
+                    event.preventDefault(); 
+                    alert('logado com sucesso.');
+                });
+            }
+        });
+    </script>
+    <section class="parceiros" data-page-name="parceiros">
+        <div class="center">
+            <h2>Nossos Parceiros</h2>
+            <p>Trabalhamos em parceria com uma das organizações líderes no campo da agricultura sustentável para oferecer o melhor conteúdo aos nossos alunos.</p>
+            <ul>
+                <li><img src="img/parceiro.jfif" alt="Parceiro"></li>
+            </ul>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="center">
+            <p>&copy; 2023 Agroacademy. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

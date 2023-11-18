@@ -1,0 +1,195 @@
+/* Reset de estilos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos gerais do corpo */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+}
+
+.center {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Estilos do cabeçalho */
+header {
+  background-color: #3498db;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.logo img {
+  max-width: 100%;
+  position: absolute;
+  top: 20px;
+  left: 10px;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 20px;
+  font-weight: bold;
+}
+
+.menu-icon img {
+  max-width: 30px;
+  cursor: pointer;
+  position: absolute;
+  top: 40px;
+  right: 30px;
+}
+
+/* Estilos da seção "Sobre" */
+.sobre {
+  background-color: #fff;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.sobre h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.sobre p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+}
+
+/* Estilos da seção "Cursos" */
+.cursos {
+  background-color: #f7f7f7;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.cursos h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.curso {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.curso img {
+  max-width: 100%;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.curso h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.curso p {
+  font-size: 16px;
+  color: #777;
+}
+
+.curso a {
+  display: inline-block;
+  background-color: #3498db;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+/* Estilos da seção "Inscrição" */
+.inscricao {
+  background-color: #3498db;
+  color: #fff;
+  text-align: center;
+  padding: 40px 0;
+}
+
+.inscricao h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.inscricao p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.inscricao a {
+  display: inline-block;
+  background-color: #fff;
+  color: #3498db;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/* Estilos da seção "Parceiros" */
+.parceiros {
+  background-color: #fff;
+  padding: 40px 0;
+}
+
+.parceiros h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.parceiros ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.parceiros li {
+  margin: 0 20px;
+}
+
+.parceiros img {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+/* Estilos do rodapé */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Estilos específicos para dispositivos móveis */
+@media screen and (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+  }
+
+  .menu a {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
