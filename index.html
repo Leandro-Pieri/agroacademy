@@ -116,6 +116,71 @@
             <p>&copy; 2023 Agroacademy. Todos os direitos reservados.</p>
         </div>
     </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Obtenha todos os links do menu e a logo
+            const menuLinks = document.querySelectorAll(".menu a");
+            const logoLink = document.getElementById('logo-link');
     
+            // Adicione um ouvinte de evento de clique para cada link do menu
+            menuLinks.forEach(function (link) {
+                link.addEventListener("click", function (event) {
+                    event.preventDefault(); // Impede o comportamento padrão do link
+                    const pageName = link.getAttribute("data-page");
+                    redirectToPage(pageName);
+                });
+            });
+    
+            // Adicione um ouvinte de evento de clique para a logo
+            if (logoLink) {
+                logoLink.addEventListener("click", function (event) {
+                    event.preventDefault();
+                    const pageName = logoLink.getAttribute("data-page");
+                    redirectToPage(pageName);
+                });
+            }
+    
+            // Função para redirecionar para a página correspondente
+            function redirectToPage(pageName) {
+                // Determine a URL da página com base no valor de pageName
+                let url = "";
+                switch (pageName) {
+                    case "sobre":
+                        url = "pages/sobre.html";
+                        break;
+                    case "fazemos":
+                        url = "pages/fazemos.html";
+                        break;
+                    case "cursos":
+                        url = "pages/cursos.html";
+                        break;
+                    case "certificados":
+                        url = "pages/certificados.html";
+                        break;
+                    case "webnarios":
+                        url = "pages/webnarios.html";
+                        break;
+                    case "repositorio":
+                        url = "pages/repositorio.html";
+                        break;
+                    case "parceiros":
+                        url = "pages/parceiros.html";
+                        break;
+                    case "suporte":
+                        url = "pages/suporte.html";
+                        break;
+                    case "inicio":
+                        url = "index.html"; // Substitua pelo nome do arquivo da sua página inicial
+                        break;
+                    default:
+                        console.error("Página não encontrada");
+                        return;
+                }
+    
+                // Redirecione para a URL da página correspondente
+                window.location.href = url;
+            }
+        });
+    </script>
 </body>
 </html>
