@@ -2,6 +2,7 @@
 <html lang="pt-br">
 <head>
     <script src="js/script.js"></script> 
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <link rel="shortcut icon" href="img/free_farm_icons_vector_template_icon_153809.ico">
@@ -79,13 +80,15 @@
             
         </div>
     
-    <!-- Adicione o seguinte código ao seu HTML existente da Agroacademy, preferencialmente em uma seção separada -->
+    <!--  -->
      <class="enrollment" data-page-name="enrollment">
         <div class="center">
             <h2>Matricule-se</h2>
             <form id="enrollment-form">
                 <input type="text" id="name" placeholder="Seu Nome" />
                 <input type="email" id="email" placeholder="Seu E-mail" />
+                <input type="text" id="cep" placeholder="Seu CEP" />
+                <input type="text" id="cidade" placeholder="Sua cidade" />
                 <button id="enroll-button">Matricular-se</button>
             </form>
         </div>
@@ -95,11 +98,40 @@
             var enrollButton = document.getElementById('enroll-button');
             if (enrollButton) {
                 enrollButton.addEventListener('click', function (event) {
-                    event.preventDefault(); 
-                    alert('logado com sucesso.');
+                    event.preventDefault();
+
+                    var cepInput = document.getElementById('cep').value;
+                    buscarEnderecoPorCEP(cepInput);
+
+                    alert('Matrícula realizada com sucesso!');
                 });
             }
         });
+
+        function buscarEnderecoPorCEP(cep) {
+            // Construa a URL da API ViaCEP
+            var apiUrl = `https://viacep.com.br/ws/${cep}/json/`;
+
+            // Faça a solicitação à API
+            $.ajax({
+                url: apiUrl,
+                type: 'GET',
+                success: function (data) {
+                    if (!data.erro) {
+                        console.log('Endereço encontrado:', data);
+                        // Aqui, você pode manipular os dados do endereço, como preenchê-los em campos do formulário.
+                         // Preencha os campos do formulário com os dados do endereço
+                         document.getElementById('cidade').value = data.localidade || '';
+
+                    } else {
+                        console.error('CEP não encontrado.');
+                    }
+                },
+                error: function (error) {
+                    console.error('Erro ao buscar dados da API:', error);
+                }
+            });
+        }
     </script>
     <section class="parceiros" data-page-name="parceiros">
         <div class="center">

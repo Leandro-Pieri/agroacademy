@@ -84,9 +84,9 @@ document.addEventListener("DOMContentLoaded", function () {
       const name = nameInput.value;
       const email = emailInput.value;
   
-      // Configuração da Gmail API com suas credenciais
-      const CLIENT_ID = '491575260101-1r1ii94lg1nu0n9o8k63s7n81kgmo5c3.apps.googleusercontent.com';
-      const CLIENT_SECRET = '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';
+      // Configuração da Gmail API com suas credenciais 
+      const CLIENT_ID = '491575260101-1rr3udejo144fftik0qq76t1l0vjitig.apps.googleusercontent.com';
+      const apikey = 'AIzaSyDYVkrriSNkLazRiu70z70E2JrwkfLK_ms';
   
       // Lógica de autenticação e acesso à Gmail API
       // Substitua esta seção com a lógica real de autenticação e solicitações à Gmail API
