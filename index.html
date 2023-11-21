@@ -95,18 +95,33 @@
     </section>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            var enrollButton = document.getElementById('enroll-button');
-            if (enrollButton) {
-                enrollButton.addEventListener('click', function (event) {
-                    event.preventDefault();
+    var enrollButton = document.getElementById('enroll-button');
+    if (enrollButton) {
+        enrollButton.addEventListener('click', function (event) {
+            event.preventDefault();
 
-                    var cepInput = document.getElementById('cep').value;
-                    buscarEnderecoPorCEP(cepInput);
-
-                    alert('Matrícula realizada com sucesso!');
-                });
-            }
+            var cepInput = document.getElementById('cep').value;
+            buscarEnderecoPorCEP(cepInput);
+            // Remova esta linha, pois não é necessário adicionar novamente o evento de alteração aqui
+            // cepInput.addEventListener('change', function () {
+            //     var cepValue = cepInput.value;
+            //     buscarEnderecoPorCEP(cepValue);
+            // });
+            
+            alert('Matrícula realizada com sucesso!');
         });
+    }
+
+    // Adicione um evento de alteração para o campo de CEP
+    var cepInput = document.getElementById('cep');
+    if (cepInput) {
+        cepInput.addEventListener('change', function () {
+            var cepValue = cepInput.value;
+            buscarEnderecoPorCEP(cepValue);
+        });
+    }
+});
+
 
         function buscarEnderecoPorCEP(cep) {
             // Construa a URL da API ViaCEP
