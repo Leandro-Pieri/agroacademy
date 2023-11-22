@@ -57,8 +57,8 @@ function redirectToPage(pageName) {
     case "webnarios":
       url = "pages/webnarios.html"; // Substitua pelo nome do arquivo da página "Webnários"
       break;
-    case "repositorio":
-      url = "pages/repositorio.html"; // Substitua pelo nome do arquivo da página "Repositório"
+    case "E-Books":
+      url = "pages/E-Books.html"; // Substitua pelo nome do arquivo da página "E-Books"
       break;
     case "parceiros":
       url = "pages/parceiros.html"; // Substitua pelo nome do arquivo da página "Parceiros"
